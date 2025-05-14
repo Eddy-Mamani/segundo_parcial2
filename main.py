@@ -93,7 +93,8 @@ def mostrar_menu_cola():
     print("2. Desencolar elemento")
     print("3. Ver frente")
     print("4. Mostrar Cola")
-    print("5. Volver al menú principal")
+    print("5. mostrar valor maximo")
+    print("6. Volver al menú principal")
 
 def operaciones_cola():
     cola = Cola()
@@ -116,6 +117,10 @@ def operaciones_cola():
         elif opcion == "4":
             cola.mostrar_cola()
         elif opcion == "5":
+            maximo =cola.maximo()
+            if maximo is not None:
+                print(f"elemento maximo de la cola: {maximo}")
+        elif opcion == "6":
             break
         else:
             print("Opción no válida. Intente de nuevo.")
